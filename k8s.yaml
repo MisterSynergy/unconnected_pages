@@ -19,9 +19,9 @@ spec:
           containers:
           - name: itemstats
             image: docker-registry.tools.wmflabs.org/toolforge-python39-sssd-base:latest
-            command: [ "/data/project/msynbot/pywikibot_tasks/unconnected-pages/venv/bin/python3" ]
-            args: [ "/data/project/shared/pywikibot/stable/pwb.py", "/data/project/msynbot/pywikibot_tasks/unconnected-pages/unconnected_pages.py" ]
-            workingDir: /data/project/msynbot/pywikibot_tasks/unconnected-pages
+            command: [ "/data/project/msynbot/pywikibot_tasks/unconnected_pages/venv/bin/python3" ]
+            args: [ "/data/project/shared/pywikibot/stable/pwb.py", "/data/project/msynbot/pywikibot_tasks/unconnected_pages/unconnected_pages.py" ]
+            workingDir: /data/project/msynbot/pywikibot_tasks/unconnected_pages
             env:
             - name: HOME
               value: /data/project/msynbot
