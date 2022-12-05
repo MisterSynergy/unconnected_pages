@@ -19,10 +19,17 @@ spec:
           containers:
           - name: itemstats
             image: docker-registry.tools.wmflabs.org/toolforge-python39-sssd-base:latest
+            resources:
+              requests:
+                memory: "100Mi"
+                cpu: "100m"
+              limits:
+                memory: "100Mi"
+                cpu: "100m"
             command: [ "/data/project/msynbot/pywikibot_tasks/unconnected_pages/venv/bin/python3" ]
             args: [ "/data/project/shared/pywikibot/stable/pwb.py", "/data/project/msynbot/pywikibot_tasks/unconnected_pages/unconnected_pages.py" ]
             workingDir: /data/project/msynbot/pywikibot_tasks/unconnected_pages
             env:
             - name: HOME
               value: /data/project/msynbot
-          restartPolicy: OnFailure
+          restartPolicy: Never
