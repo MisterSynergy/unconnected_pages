@@ -1,6 +1,7 @@
 from time import time, sleep, strftime
 from urllib.parse import quote, quote_plus
 from typing import TypedDict
+
 import requests
 import pywikibot as pwb
 

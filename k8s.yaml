@@ -33,5 +33,5 @@ spec:
               value: /data/project/shared/pywikibot/stable
             workingDir: /data/project/msynbot/pywikibot_tasks/unconnected_pages
             command: [ venv/bin/python3 ]
-            args: [ unconnected_pages.py ]
+            args: [ main.py ]
           restartPolicy: Never
